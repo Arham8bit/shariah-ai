@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 from groq import Groq
+from dotenv import load_dotenv
 import os
 
+load_dotenv()   
+
 app = Flask(__name__)
-
-# ── Groq free API key — get yours at console.groq.com ──
-client = Groq(api_key="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")
-
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 SYSTEM_PROMPT = """You are an expert Islamic Finance advisor with deep knowledge of Shariah law as it applies to financial matters.
 
 You help users understand:
@@ -90,4 +90,5 @@ def chat():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
