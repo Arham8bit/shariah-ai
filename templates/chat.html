@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% block title %}AI Islamic Finance Advisor — Shariah.AI{% endblock %}
+
+{% block content %}
+
+<div class="chat-hero">
+  <div class="hero-badge" style="display: inline-flex; margin-bottom: 1.5rem;">🤖 Live AI Demo — Powered by Shariah.AI</div>
+  <h1>Islamic Finance<br/><em>AI Advisor</em></h1>
+  <p>Ask anything about halal investing, zakat, Shariah compliance, Islamic contracts, or any finance-related ruling.</p>
+</div>
+
+<div class="chat-wrapper">
+  <!-- Chat Messages Box -->
+  <div class="chat-box" id="chatBox">
+    <div class="msg bot">
+      <div class="msg-avatar">☪</div>
+      <div class="msg-bubble">
+        As-salamu alaykum! I'm Shariah.AI's Islamic Finance Advisor. I can help you with questions about halal investing, zakat calculations, Shariah-compliant contracts, riba avoidance, and much more.<br/><br/>
+        How can I assist you today?
+      </div>
+    </div>
+  </div>
+
+  <!-- Input Area -->
+  <div class="chat-input-area">
+    <input
+      type="text"
+      id="userInput"
+      placeholder="Ask about halal investing, zakat, Murabaha contracts..."
+      autocomplete="off"
+    />
+    <button id="sendBtn" onclick="sendMessage()">Send →</button>
+  </div>
+
+  <!-- Suggested Questions -->
+  <div class="suggested-questions">
+    <button class="sq-btn" onclick="askSuggested(this)">Is crypto halal?</button>
+    <button class="sq-btn" onclick="askSuggested(this)">How do I calculate my zakat on stocks?</button>
+    <button class="sq-btn" onclick="askSuggested(this)">What is Murabaha financing?</button>
+    <button class="sq-btn" onclick="askSuggested(this)">Is index fund investing Shariah-compliant?</button>
+    <button class="sq-btn" onclick="askSuggested(this)">What makes a mortgage haram?</button>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const chatBox = document.getElementById('chatBox');
+  const userInput = document.getElementById('userInput');
+  const sendBtn = document.getElementById('sendBtn');
+
+  function scrollBottom() {
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  function addMessage(role, text) {
+    const isBot = role === 'bot';
+    const msg = document.createElement('div');
+    msg.className = `msg ${role}`;
+    msg.innerHTML = `
+      <div class="msg-avatar">${isBot ? '☪' : '👤'}</div>
+      <div class="msg-bubble">${text.replace(/\n/g, '<br/>')}</div>
+    `;
+    chatBox.appendChild(msg);
+    scrollBottom();
+  }
+
+  function showTyping() {
+    const typing = document.createElement('div');
+    typing.className = 'msg bot';
+    typing.id = 'typingIndicator';
+    typing.innerHTML = `
+      <div class="msg-avatar">☪</div>
+      <div class="msg-bubble typing">
+        <span></span><span></span><span></span>
+      </div>
+    `;
+    chatBox.appendChild(typing);
+    scrollBottom();
+  }
+
+  function removeTyping() {
+    const t = document.getElementById('typingIndicator');
+    if (t) t.remove();
+  }
+
+  async function sendMessage() {
+    const message = userInput.value.trim();
+    if (!message) return;
+
+    // Show user message
+    addMessage('user', message);
+    userInput.value = '';
+    sendBtn.disabled = true;
+
+    // Show typing indicator
+    showTyping();
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message })
+      });
+
+      const data = await res.json();
+      removeTyping();
+
+      if (data.reply) {
+        addMessage('bot', data.reply);
+      } else {
+        addMessage('bot', 'Apologies, I encountered an issue. Please try again.');
+      }
+    } catch (err) {
+      removeTyping();
+      addMessage('bot', 'Connection error. Please check your internet and try again.');
+    }
+
+    sendBtn.disabled = false;
+    userInput.focus();
+  }
+
+  function askSuggested(btn) {
+    userInput.value = btn.textContent;
+    sendMessage();
+  }
+
+  // Send on Enter key
+  userInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) sendMessage();
+  });
+</script>
+{% endblock %}

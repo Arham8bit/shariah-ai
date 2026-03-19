@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Contact — Shariah.AI{% endblock %}
+{% block content %}
+<div class="page-header">
+  <p class="section-label">Get in Touch</p>
+  <h1>Let's Build the<br/><em>Future</em> Together</h1>
+  <p>Whether you're an Islamic bank, fintech startup, Shariah board, or investor — we'd love to hear from you.</p>
+</div>
+<section class="section-pad">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <h3>Ready to Transform<br/>Islamic Finance?</h3>
+      <p>Request a full platform demo, discuss partnership opportunities, or simply ask a question. Our team responds within 24 hours.</p>
+      <div class="contact-detail"><span>✉</span><span>hello@shariah.ai</span></div>
+      <div class="contact-detail"><span>🌐</span><span>www.shariah.ai</span></div>
+      <div class="contact-detail"><span>📍</span><span>Global — Dubai · Kuala Lumpur · London</span></div>
+      <div style="margin-top: 2.5rem;">
+        <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 1rem;">Or try the live demo first</p>
+        <a href="/chat" class="btn-outline">Launch AI Advisor →</a>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Your name" id="cName"/>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="your@email.com" id="cEmail"/>
+      </div>
+      <div class="form-group">
+        <label>Organization</label>
+        <input type="text" placeholder="Bank, Fintech, Fund, etc." id="cOrg"/>
+      </div>
+      <div class="form-group">
+        <label>I'm interested in</label>
+        <select id="cType">
+          <option value="">Select...</option>
+          <option>Platform Demo</option>
+          <option>Strategic Partnership</option>
+          <option>API Integration</option>
+          <option>Investment Opportunity</option>
+          <option>Academic Collaboration</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="4" placeholder="Tell us about your needs..." id="cMsg"></textarea>
+      </div>
+      <button class="btn-primary" onclick="submitForm()" style="width: 100%; justify-content: center;">Send Message →</button>
+      <p id="formMsg" style="display: none; font-size: 0.85rem; color: var(--gold); margin-top: 1rem;">✓ Message received! We'll be in touch within 24 hours.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+function submitForm() {
+  const name = document.getElementById('cName').value.trim();
+  const email = document.getElementById('cEmail').value.trim();
+  if (!name || !email) { alert('Please fill in your name and email.'); return; }
+  document.getElementById('formMsg').style.display = 'block';
+  // In production: POST this data to your backend
+  console.log('Contact form submitted');
+}
+</script>
+{% endblock %}

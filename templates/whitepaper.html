@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Whitepaper — Shariah.AI{% endblock %}
+{% block content %}
+<div class="page-header">
+  <p class="section-label">Research</p>
+  <h1>The Future of<br/><em>AI-Driven</em> Islamic Finance</h1>
+  <p>Download our founding whitepaper — a comprehensive look at how artificial intelligence can serve the $3.9 trillion Islamic finance industry without compromising Shariah principles.</p>
+</div>
+<section class="section-pad">
+  <div class="whitepaper-box reveal">
+    <div>
+      <h3>Shariah.AI Platform Whitepaper</h3>
+      <p>22 pages covering our technology architecture, scholarly methodology, compliance framework, and roadmap for bringing AI-native Islamic finance tools to the global Muslim community.</p>
+      <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--gold);">✦ Includes: RAG architecture overview · Multi-madhab reasoning · AAOIFI alignment · Investment screening methodology</p>
+      <div class="wp-form" style="margin-top: 2rem;">
+        <input type="email" id="wpEmail" placeholder="Enter your email address" />
+        <button onclick="downloadWP()">Download Free →</button>
+      </div>
+      <p id="wpMsg" style="margin-top: 1rem; font-size: 0.85rem; color: var(--gold); display: none;">✓ Thank you! Your whitepaper download will begin shortly.</p>
+    </div>
+    <div style="text-align: center; padding: 2rem; border: 1px solid var(--border); background: var(--navy); min-width: 200px;">
+      <div style="font-size: 4rem; margin-bottom: 1rem;">📄</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--gold);">Shariah.AI</div>
+      <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem;">Whitepaper v1.0</div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+function downloadWP() {
+  const email = document.getElementById('wpEmail').value.trim();
+  if (!email || !email.includes('@')) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+  document.getElementById('wpMsg').style.display = 'block';
+  // In production: send email to your backend/CRM
+  console.log('Lead captured:', email);
+}
+</script>
+{% endblock %}

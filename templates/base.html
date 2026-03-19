@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}Shariah.AI — Intelligent Islamic Finance{% endblock %}</title>
+  <meta name="description" content="AI-powered Shariah compliance tools for modern Islamic finance. Built on deep Islamic jurisprudence and cutting-edge AI."/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav>
+  <a href="/" class="logo">Shariah<span>.AI</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/solutions">Solutions</a></li>
+    <li><a href="/technology">Technology</a></li>
+    <li><a href="/case-studies">Case Studies</a></li>
+    <li><a href="/partners">Partners</a></li>
+    <li><a href="/whitepaper">Whitepaper</a></li>
+    <li><a href="/chat" class="nav-cta">Try Demo →</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ─── PAGE CONTENT ─── -->
+{% block content %}{% endblock %}
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <a href="/" class="footer-logo">Shariah<span>.AI</span></a>
+  <ul class="footer-links">
+    <li><a href="/solutions">Solutions</a></li>
+    <li><a href="/technology">Technology</a></li>
+    <li><a href="/case-studies">Case Studies</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 Shariah.AI. Built with purpose.</p>
+</footer>
+
+<script>
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // Scroll reveal animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>
