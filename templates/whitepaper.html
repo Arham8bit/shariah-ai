@@ -1,27 +1,61 @@
 {% extends "base.html" %}
 {% block title %}Whitepaper — Shariah.AI{% endblock %}
 {% block content %}
+
 <div class="page-header">
-  <p class="section-label">Research</p>
-  <h1>The Future of<br/><em>AI-Driven</em> Islamic Finance</h1>
-  <p>Download our founding whitepaper — a comprehensive look at how artificial intelligence can serve the $3.9 trillion Islamic finance industry without compromising Shariah principles.</p>
-</div>
-<section class="section-pad">
-  <div class="whitepaper-box reveal">
-    <div>
-      <h3>Shariah.AI Platform Whitepaper</h3>
-      <p>22 pages covering our technology architecture, scholarly methodology, compliance framework, and roadmap for bringing AI-native Islamic finance tools to the global Muslim community.</p>
-      <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--gold);">✦ Includes: RAG architecture overview · Multi-madhab reasoning · AAOIFI alignment · Investment screening methodology</p>
-      <div class="wp-form" style="margin-top: 2rem;">
-        <input type="email" id="wpEmail" placeholder="Enter your email address" />
-        <button onclick="downloadWP()">Download Free →</button>
+  <div class="page-header-text">
+    <p class="section-label">Research</p>
+    <h1>The Future of<br/><span>AI-Driven</span> Islamic Finance</h1>
+    <p>Download our founding whitepaper — a comprehensive look at how AI can serve the $3.9T Islamic finance industry without compromising Shariah principles.</p>
+  </div>
+  <!-- DOCUMENT SCANNER ANIMATION -->
+  <div class="page-header-visual">
+    <div class="anim-whitepaper">
+      <div class="doc-page doc-back2"></div>
+      <div class="doc-page doc-back1"></div>
+      <div class="doc-page doc-main">
+        <div class="doc-header-bar">
+          <div class="doc-header-dot"></div>
+          <div class="doc-header-dot"></div>
+          <div class="doc-header-dot"></div>
+        </div>
+        <div class="doc-body">
+          <div class="doc-line dl1"></div>
+          <div class="doc-line dl2"></div>
+          <div class="doc-line dl3"></div>
+          <div class="doc-line dl4"></div>
+          <div class="doc-line dl5"></div>
+          <div class="doc-line dl6"></div>
+          <div class="doc-line dl7"></div>
+          <div class="doc-line dl8"></div>
+        </div>
+        <div class="scan-line"></div>
       </div>
-      <p id="wpMsg" style="margin-top: 1rem; font-size: 0.85rem; color: var(--gold); display: none;">✓ Thank you! Your whitepaper download will begin shortly.</p>
+      <div class="doc-badge db1">✓ AAOIFI Aligned</div>
+      <div class="doc-badge db2">22 Pages</div>
+      <div class="doc-badge db3">Free Download</div>
     </div>
-    <div style="text-align: center; padding: 2rem; border: 1px solid var(--border); background: var(--navy); min-width: 200px;">
-      <div style="font-size: 4rem; margin-bottom: 1rem;">📄</div>
-      <div style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--gold);">Shariah.AI</div>
-      <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem;">Whitepaper v1.0</div>
+  </div>
+</div>
+
+<section class="section-white">
+  <div class="container">
+    <div class="whitepaper-box reveal">
+      <div>
+        <h3>Shariah.AI Platform Whitepaper</h3>
+        <p>22 pages covering our technology architecture, scholarly methodology, compliance framework, and roadmap for bringing AI-native Islamic finance tools to the global Muslim community.</p>
+        <p style="margin-top:0.75rem;font-size:0.82rem;color:var(--blue);font-weight:600">✦ RAG architecture · Multi-madhab reasoning · AAOIFI alignment · Investment screening</p>
+        <div class="wp-form" style="margin-top:1.75rem">
+          <input type="email" id="wpEmail" placeholder="Enter your email address"/>
+          <button onclick="downloadWP()">Download Free →</button>
+        </div>
+        <p id="wpMsg" style="display:none;margin-top:1rem;font-size:0.85rem;color:#10b981;font-weight:600">✓ Thank you! Your download will begin shortly.</p>
+      </div>
+      <div style="text-align:center;padding:2rem;background:var(--blue-soft);border:1px solid var(--blue-mid);border-radius:var(--radius-lg);min-width:180px">
+        <div style="font-size:3.5rem;margin-bottom:0.75rem">📄</div>
+        <div style="font-weight:800;color:var(--blue);font-size:0.95rem">Shariah.AI</div>
+        <div style="font-size:0.72rem;color:var(--gray-5);margin-top:0.25rem;font-weight:500">Whitepaper v1.0</div>
+      </div>
     </div>
   </div>
 </section>
@@ -30,13 +64,8 @@
 <script>
 function downloadWP() {
   const email = document.getElementById('wpEmail').value.trim();
-  if (!email || !email.includes('@')) {
-    alert('Please enter a valid email address.');
-    return;
-  }
+  if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
   document.getElementById('wpMsg').style.display = 'block';
-  // In production: send email to your backend/CRM
-  console.log('Lead captured:', email);
 }
 </script>
 {% endblock %}

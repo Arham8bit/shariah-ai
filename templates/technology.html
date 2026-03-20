@@ -1,54 +1,142 @@
 {% extends "base.html" %}
 {% block title %}Technology — Shariah.AI{% endblock %}
 {% block content %}
+
 <div class="page-header">
-  <p class="section-label">Under the Hood</p>
-  <h1>Built on <em>Serious</em><br/>Technology</h1>
-  <p>Shariah.AI is not a wrapper. It's a purpose-built Islamic finance intelligence platform powered by RAG, LLMs, and a curated scholarly knowledge graph.</p>
+  <div class="page-header-text">
+    <p class="section-label">Under the Hood</p>
+    <h1>Built on <span>Serious</span><br/>Technology</h1>
+    <p>Shariah.AI is a purpose-built Islamic finance intelligence platform powered by RAG, LLMs, and a curated scholarly knowledge graph.</p>
+  </div>
+
+  <!-- ARCHITECTURE DIAGRAM ANIMATION -->
+  <div class="page-header-visual">
+    <div class="anim-tech-v2">
+
+      <!-- Layer boxes -->
+      <div class="arch-layer al-user">
+        <div class="arch-title">USER</div>
+        <div class="arch-sub">Interface</div>
+      </div>
+
+      <div class="arch-layer al-api">
+        <div class="arch-title">API</div>
+        <div class="arch-sub">Gateway</div>
+      </div>
+
+      <div class="arch-layer al-rag">
+        <div class="arch-title">RAG</div>
+        <div class="arch-sub">Engine</div>
+      </div>
+
+      <div class="arch-layer al-vec">
+        <div class="arch-title">VECTOR</div>
+        <div class="arch-sub">Database</div>
+      </div>
+
+      <!-- LLM Core — center hero -->
+      <div class="arch-layer al-llm">
+        <div style="font-size:1.4rem;margin-bottom:2px">🧠</div>
+        <div class="arch-title">LLaMA 3.3</div>
+        <div class="arch-sub">AI Core</div>
+      </div>
+
+      <div class="arch-layer al-scholar">
+        <div class="arch-title">SCHOLAR</div>
+        <div class="arch-sub">Knowledge</div>
+      </div>
+
+      <div class="arch-layer al-output">
+        <div class="arch-title">OUTPUT</div>
+        <div class="arch-sub">Response</div>
+      </div>
+
+      <!-- SVG flow arrows -->
+      <svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- User → API Gateway (horizontal) -->
+        <path class="flow-path fp-blue" d="M82,36 L120,36"/>
+        <!-- API → LLM (diagonal down) -->
+        <path class="flow-path fp-purple" d="M156,62 L150,80"/>
+        <!-- RAG → LLM (diagonal down-left) -->
+        <path class="flow-path fp-green" d="M266,62 L195,80"/>
+        <!-- Vector DB → LLM (diagonal up-right) -->
+        <path class="flow-path fp-amber" d="M82,131 L105,125"/>
+        <!-- Scholar → LLM (diagonal up-left) -->
+        <path class="flow-path fp-purple" d="M266,131 L195,125"/>
+        <!-- LLM → Output (down) -->
+        <path class="flow-path fp-blue" d="M150,170 L150,200"/>
+
+        <!-- Animated dots traveling along paths -->
+        <!-- User→API dot -->
+        <circle r="3" fill="#0066ff" filter="url(#glow)">
+          <animateMotion dur="2s" repeatCount="indefinite" begin="0s">
+            <mpath href="#path-ua"/>
+          </animateMotion>
+        </circle>
+        <path id="path-ua" d="M82,36 L120,36" fill="none"/>
+
+        <!-- API→LLM dot -->
+        <circle r="3" fill="#6366f1" filter="url(#glow)">
+          <animateMotion dur="1.8s" repeatCount="indefinite" begin="0.4s">
+            <mpath href="#path-al"/>
+          </animateMotion>
+        </circle>
+        <path id="path-al" d="M156,62 L150,80" fill="none"/>
+
+        <!-- RAG→LLM dot -->
+        <circle r="3" fill="#10b981" filter="url(#glow)">
+          <animateMotion dur="2.2s" repeatCount="indefinite" begin="0.8s">
+            <mpath href="#path-rl"/>
+          </animateMotion>
+        </circle>
+        <path id="path-rl" d="M266,62 L195,80" fill="none"/>
+
+        <!-- VecDB→LLM dot -->
+        <circle r="3" fill="#f59e0b" filter="url(#glow)">
+          <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.2s">
+            <mpath href="#path-vl"/>
+          </animateMotion>
+        </circle>
+        <path id="path-vl" d="M82,131 L105,125" fill="none"/>
+
+        <!-- Scholar→LLM dot -->
+        <circle r="3" fill="#ec4899" filter="url(#glow)">
+          <animateMotion dur="2s" repeatCount="indefinite" begin="0.6s">
+            <mpath href="#path-sl"/>
+          </animateMotion>
+        </circle>
+        <path id="path-sl" d="M266,131 L195,125" fill="none"/>
+
+        <!-- LLM→Output dot -->
+        <circle r="4" fill="#0066ff" filter="url(#glow)">
+          <animateMotion dur="1.5s" repeatCount="indefinite" begin="0.2s">
+            <mpath href="#path-lo"/>
+          </animateMotion>
+        </circle>
+        <path id="path-lo" d="M150,170 L150,200" fill="none"/>
+
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+      </svg>
+
+    </div>
+  </div>
 </div>
-<section class="section-pad">
-  <div class="tech-grid">
-    <div class="tech-item reveal">
-      <div class="tech-num">01</div>
-      <div>
-        <h3>Large Language Models (LLMs)</h3>
-        <p>We leverage state-of-the-art LLMs fine-tuned on Islamic finance corpora — including AAOIFI standards, scholarly books, and published fatawa — to generate contextually accurate, source-grounded responses.</p>
-      </div>
-    </div>
-    <div class="tech-item reveal">
-      <div class="tech-num">02</div>
-      <div>
-        <h3>Retrieval-Augmented Generation (RAG)</h3>
-        <p>Our vector database indexes thousands of Shariah texts, enabling the AI to retrieve relevant passages before generating answers — grounding responses in real Islamic scholarship, not hallucination.</p>
-      </div>
-    </div>
-    <div class="tech-item reveal">
-      <div class="tech-num">03</div>
-      <div>
-        <h3>Shariah Knowledge Graph</h3>
-        <p>A structured ontology of Islamic finance concepts — linking rulings, scholars, madhabs, AAOIFI standards, and financial instruments — that powers our compliance engine beyond simple text matching.</p>
-      </div>
-    </div>
-    <div class="tech-item reveal">
-      <div class="tech-num">04</div>
-      <div>
-        <h3>Real-Time Financial Data</h3>
-        <p>Integration with live market data feeds enables real-time halal stock screening, nisab calculation based on current gold/silver prices, and up-to-date sukuk analysis.</p>
-      </div>
-    </div>
-    <div class="tech-item reveal">
-      <div class="tech-num">05</div>
-      <div>
-        <h3>Multi-Madhab Reasoning</h3>
-        <p>Our system doesn't collapse complex scholarly disagreements into a single answer. It surfaces Hanafi, Maliki, Shafi'i, and Hanbali positions where they differ — respecting the diversity of Islamic jurisprudence.</p>
-      </div>
-    </div>
-    <div class="tech-item reveal">
-      <div class="tech-num">06</div>
-      <div>
-        <h3>Scholar Review Pipeline</h3>
-        <p>High-stakes outputs go through a human scholar review loop before delivery — ensuring critical compliance decisions are always validated by qualified Islamic finance experts.</p>
-      </div>
+
+<section class="section-white">
+  <div class="container">
+    <div class="tech-grid">
+      <div class="tech-item reveal"><div class="tech-num">01</div><div><h3>Large Language Models (LLMs)</h3><p>State-of-the-art LLMs fine-tuned on Islamic finance corpora — including AAOIFI standards, scholarly books, and published fatawa.</p></div></div>
+      <div class="tech-item reveal"><div class="tech-num">02</div><div><h3>Retrieval-Augmented Generation (RAG)</h3><p>Our vector database indexes thousands of Shariah texts, enabling the AI to retrieve relevant passages before generating answers.</p></div></div>
+      <div class="tech-item reveal"><div class="tech-num">03</div><div><h3>Shariah Knowledge Graph</h3><p>A structured ontology linking rulings, scholars, madhabs, AAOIFI standards, and financial instruments for precision compliance.</p></div></div>
+      <div class="tech-item reveal"><div class="tech-num">04</div><div><h3>Real-Time Financial Data</h3><p>Live market data feeds enabling real-time halal stock screening and up-to-date nisab calculation based on live gold prices.</p></div></div>
+      <div class="tech-item reveal"><div class="tech-num">05</div><div><h3>Multi-Madhab Reasoning</h3><p>Surfaces Hanafi, Maliki, Shafi'i, and Hanbali positions where they differ — respecting the diversity of Islamic jurisprudence.</p></div></div>
+      <div class="tech-item reveal"><div class="tech-num">06</div><div><h3>Scholar Review Pipeline</h3><p>High-stakes outputs go through a human scholar review loop — ensuring critical compliance decisions are always validated.</p></div></div>
     </div>
   </div>
 </section>

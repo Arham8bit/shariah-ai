@@ -1,74 +1,56 @@
 {% extends "base.html" %}
 {% block title %}Solutions — Shariah.AI{% endblock %}
-
 {% block content %}
+
 <div class="page-header">
-  <p class="section-label">Our Solutions</p>
-  <h1>AI Tools for <em>Every</em><br/>Islamic Finance Need</h1>
-  <p>Ten specialized AI modules, each built with deep Islamic jurisprudence at its core. Currently in active development — Phase 1 demo is live now.</p>
+  <div class="page-header-text">
+    <p class="section-label">Our Solutions</p>
+    <h1>AI Tools for <span>Every</span><br/>Islamic Finance Need</h1>
+    <p>Ten specialized AI modules, each built with deep Islamic jurisprudence at its core. Phase 1 demo is live now.</p>
+  </div>
+
+  <!-- HEXAGON HONEYCOMB ANIMATION -->
+  <div class="page-header-visual">
+    <div class="anim-solutions-v2">
+      <div class="hex-grid">
+
+        <!-- Row 1 -->
+        <div class="hex hex-1">📋<div class="hex-label">Compliance</div></div>
+        <div class="hex hex-2">📈<div class="hex-label">Investing</div></div>
+        <div class="hex hex-3">🌙<div class="hex-label">Zakat</div></div>
+        <div class="hex hex-4">📜<div class="hex-label">Contracts</div></div>
+
+        <!-- Row 2 (offset) -->
+        <div class="hex hex-5">💰<div class="hex-label">Finance</div></div>
+        <div class="hex hex-6">
+          <div class="hex-center-label">Shariah<br/>.AI</div>
+        </div>
+        <div class="hex hex-7">🔍<div class="hex-label">Fatwa Search</div></div>
+
+        <!-- Row 3 -->
+        <div class="hex hex-8">🏦<div class="hex-label">Banking</div></div>
+        <div class="hex hex-9">🤖<div class="hex-label">Advisor</div></div>
+        <div class="hex hex-10">💡<div class="hex-label">Validator</div></div>
+        <div class="hex hex-11">📊<div class="hex-label">Sukuk</div></div>
+
+      </div>
+    </div>
+  </div>
 </div>
 
-<section class="section-pad">
-  <div class="cards-grid">
-    <div class="card reveal">
-      <div class="card-icon">📋</div>
-      <h3>Shariah Compliance Checker</h3>
-      <p>Paste any financial contract, product description, or investment into our AI engine. Get a detailed Shariah compliance verdict with references to AAOIFI standards, scholarly opinion, and specific issues flagged (riba, gharar, maysir, prohibited sectors).</p>
-      <span class="card-tag">Live in Phase 2</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">📈</div>
-      <h3>Halal Investment Analyzer</h3>
-      <p>Screen any stock ticker against Islamic finance rules: revenue purification thresholds, prohibited business activity checks, debt-to-asset ratios, and interest income limits. Covers 50,000+ global securities.</p>
-      <span class="card-tag">Live in Phase 2</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">🌙</div>
-      <h3>AI Zakat Calculator</h3>
-      <p>Multi-asset zakat calculation covering bank savings, gold & silver, stocks & funds, crypto assets, trade inventory, real estate, and agricultural produce — with nisab updated in real-time.</p>
-      <span class="card-tag">Live in Phase 2</span>
-    </div>
-    <div class="card reveal" style="border-color: var(--gold);">
-      <div class="card-icon">🤖</div>
-      <h3>Islamic Finance AI Advisor ✦ Live</h3>
-      <p>Our flagship chatbot answers questions on halal finance, investing rules, zakat, Islamic contracts, and Shariah rulings. Powered by a large language model grounded in Islamic finance scholarship.</p>
-      <a href="/chat" class="btn-primary" style="margin-top: 1.2rem; display: inline-block; font-size: 0.85rem; padding: 0.6rem 1.2rem;">Try it Now →</a>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">📜</div>
-      <h3>Islamic Contract Generator</h3>
-      <p>Generate legally sound, Shariah-compliant contracts for Murabaha (cost-plus sale), Mudarabah (profit-sharing), Ijara (leasing), Musharaka (partnership), and Istisna (manufacturing) in minutes.</p>
-      <span class="card-tag">Live in Phase 2</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">💰</div>
-      <h3>Halal Personal Finance Planner</h3>
-      <p>A complete Islamic financial planning tool — halal budgeting, riba-free savings goals, Islamic insurance (takaful) guidance, and Shariah-compliant retirement planning strategies.</p>
-      <span class="card-tag">Live in Phase 3</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">🔍</div>
-      <h3>Fatwa Knowledge Search</h3>
-      <p>Vector-powered semantic search across thousands of fatawa from global institutions: AAOIFI, OIC Fiqh Academy, Darul Uloom Deoband, Al-Azhar, and individual scholars like Ibn Uthaymeen and Ibn Baaz.</p>
-      <span class="card-tag">Live in Phase 2</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">💡</div>
-      <h3>Halal Business Idea Validator</h3>
-      <p>Describe your business idea and get a Shariah compliance analysis — covering revenue model, product/service permissibility, potential haram elements, and suggested halal alternatives.</p>
-      <span class="card-tag">Live in Phase 3</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">🏦</div>
-      <h3>Islamic Banking Product Comparison</h3>
-      <p>Compare Islamic banking products across global institutions side-by-side — profit rates, structures, terms, and Shariah board certifications to find the most suitable option for your needs.</p>
-      <span class="card-tag">Live in Phase 3</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">📊</div>
-      <h3>Sukuk Investment Analyzer</h3>
-      <p>Analyze sukuk (Islamic bonds) for structure compliance, issuer credibility, yield benchmarking, and underlying asset quality — making complex sukuk investing accessible to everyone.</p>
-      <span class="card-tag">Live in Phase 3</span>
+<section class="section-white">
+  <div class="container">
+    <div class="feat-grid">
+      <div class="feat-card reveal"><div class="feat-icon fi-blue">📋</div><h3>Shariah Compliance Checker</h3><p>Paste any financial contract, product, or investment. Get a detailed compliance verdict with AAOIFI references and specific issues flagged.</p><span class="card-tag">Phase 2</span></div>
+      <div class="feat-card reveal"><div class="feat-icon fi-green">📈</div><h3>Halal Investment Analyzer</h3><p>Screen stocks against Islamic finance rules: revenue purification thresholds, prohibited business checks, debt-to-asset ratios.</p><span class="card-tag">Phase 2</span></div>
+      <div class="feat-card reveal"><div class="feat-icon fi-amber">🌙</div><h3>AI Zakat Calculator</h3><p>Multi-asset zakat calculation covering savings, gold, crypto, stocks, trade inventory, and real estate — with live nisab updates.</p><span class="card-tag">Phase 2</span></div>
+      <div class="feat-card featured reveal"><div class="feat-icon fi-blue">🤖</div><h3>Islamic Finance AI Advisor <span style="font-size:0.68rem;color:var(--blue)">● Live</span></h3><p>Our flagship chatbot answers questions on halal finance, investing, zakat, Islamic contracts, and Shariah rulings.</p><a href="/chat" class="btn-primary" style="margin-top:1rem;display:inline-flex;font-size:0.82rem;padding:0.6rem 1.3rem">Try Now →</a></div>
+      <div class="feat-card reveal"><div class="feat-icon fi-purple">📜</div><h3>Islamic Contract Generator</h3><p>Generate Murabaha, Mudarabah, Ijara, and Musharaka contracts — Shariah-compliant in minutes.</p><span class="card-tag">Phase 2</span></div>
+      <div class="feat-card reveal"><div class="feat-icon fi-teal">💰</div><h3>Halal Personal Finance Planner</h3><p>Halal budgeting, riba-free savings goals, takaful guidance, and Shariah-compliant retirement planning strategies.</p><span class="card-tag">Phase 3</span></div>
+      <div class="feat-card reveal"><div class="feat-icon fi-blue">🔍</div><h3>Fatwa Knowledge Search</h3><p>Semantic search across thousands of fatawa from AAOIFI, OIC Fiqh Academy, and leading global scholars.</p><span class="card-tag">Phase 2</span></div>
+      <div class="feat-card reveal"><div class="feat-icon fi-green">💡</div><h3>Halal Business Idea Validator</h3><p>Describe your business idea and get a Shariah compliance analysis with suggested halal alternatives.</p><span class="card-tag">Phase 3</span></div>
+      <div class="feat-card reveal"><div class="feat-icon fi-amber">🏦</div><h3>Islamic Banking Product Comparison</h3><p>Compare Islamic banking products across global institutions side-by-side — profit rates, structures, certifications.</p><span class="card-tag">Phase 3</span></div>
+      <div class="feat-card reveal"><div class="feat-icon fi-purple">📊</div><h3>Sukuk Investment Analyzer</h3><p>Analyze sukuk for structure compliance, issuer credibility, yield benchmarking, and underlying asset quality.</p><span class="card-tag">Phase 3</span></div>
     </div>
   </div>
 </section>

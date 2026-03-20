@@ -1,42 +1,66 @@
 {% extends "base.html" %}
 {% block title %}Partners — Shariah.AI{% endblock %}
 {% block content %}
+
 <div class="page-header">
-  <p class="section-label">Our Network</p>
-  <h1>Built With &amp;<br/><em>For</em> the Ecosystem</h1>
-  <p>Shariah.AI works alongside Islamic banks, fintech companies, Shariah boards, and academic institutions to deliver trusted, verifiable AI outputs.</p>
+  <div class="page-header-text">
+    <p class="section-label">Our Network</p>
+    <h1>Built With &amp; <em style="font-style:italic;color:var(--blue)">For</em><br/>the Ecosystem</h1>
+    <p>Shariah.AI works alongside Islamic banks, fintech companies, Shariah boards, and academic institutions to deliver trusted, verifiable AI outputs.</p>
+  </div>
+  <!-- ORBITING GLOBE ANIMATION -->
+  <div class="page-header-visual">
+    <div class="anim-partners">
+      <div class="orbit-ring or1">
+        <div class="orbit-node"><div class="orbit-node-label">AAOIFI</div></div>
+      </div>
+      <div class="orbit-ring or2">
+        <div class="orbit-node-sm"><div class="orbit-node-label">IsDB</div></div>
+      </div>
+      <div class="orbit-ring or3">
+        <div class="orbit-node"><div class="orbit-node-label">IFSB</div></div>
+      </div>
+      <div class="globe-core"></div>
+      <div class="globe-line gl1"></div>
+      <div class="globe-line gl2"></div>
+      <div class="globe-line gl3"></div>
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.5rem;z-index:5">🌐</div>
+    </div>
+  </div>
 </div>
-<section class="section-pad">
-  <p class="section-label reveal">Strategic Partners</p>
-  <div class="partners-row reveal">
-    <div class="partner-item">AAOIFI</div>
-    <div class="partner-item">IFSB</div>
-    <div class="partner-item">OIC Fiqh Academy</div>
-    <div class="partner-item">INCEIF Malaysia</div>
-    <div class="partner-item">IsDB Group</div>
-  </div>
 
-  <p class="section-label reveal" style="margin-top: 4rem;">Integration Partners</p>
-  <div class="partners-row reveal">
-    <div class="partner-item">Refinitiv</div>
-    <div class="partner-item">Bloomberg</div>
-    <div class="partner-item">Morningstar</div>
-    <div class="partner-item">S&amp;P Global</div>
-  </div>
-
-  <p class="section-label reveal" style="margin-top: 4rem;">Academic Advisory</p>
-  <div class="partners-row reveal">
-    <div class="partner-item">Durham University</div>
-    <div class="partner-item">ISRA Malaysia</div>
-    <div class="partner-item">Harvard Divinity</div>
-    <div class="partner-item">KFUPM</div>
-  </div>
-
-  <div style="margin-top: 5rem; text-align: center;" class="reveal">
-    <p class="section-label">Become a Partner</p>
-    <h2 class="section-title">Interested in <em>Partnering</em> With Us?</h2>
-    <p class="section-sub" style="margin: 1rem auto 2rem;">We're actively seeking Shariah boards, Islamic banks, fintech companies, and academic institutions to join our growing ecosystem.</p>
-    <a href="/contact" class="btn-primary">Get in Touch →</a>
+<section class="section-white">
+  <div class="container">
+    <p class="eyebrow reveal">Strategic Partners</p>
+    <div class="partners-grid reveal">
+      <div class="partner-box">AAOIFI</div>
+      <div class="partner-box">IFSB</div>
+      <div class="partner-box">OIC Fiqh Academy</div>
+      <div class="partner-box">INCEIF Malaysia</div>
+      <div class="partner-box">IsDB Group</div>
+    </div>
+    <p class="eyebrow reveal" style="margin-top:4rem">Integration Partners</p>
+    <div class="partners-grid reveal">
+      <div class="partner-box">Refinitiv</div>
+      <div class="partner-box">Bloomberg</div>
+      <div class="partner-box">Morningstar</div>
+      <div class="partner-box">S&amp;P Global</div>
+      <div class="partner-box">FactSet</div>
+    </div>
+    <p class="eyebrow reveal" style="margin-top:4rem">Academic Advisory</p>
+    <div class="partners-grid reveal">
+      <div class="partner-box">Durham University</div>
+      <div class="partner-box">ISRA Malaysia</div>
+      <div class="partner-box">Harvard Divinity</div>
+      <div class="partner-box">KFUPM</div>
+      <div class="partner-box">Al-Azhar</div>
+    </div>
+    <div style="margin-top:5rem;text-align:center;" class="reveal">
+      <p class="eyebrow" style="justify-content:center">Become a Partner</p>
+      <h2 class="section-h" style="text-align:center">Interested in <span>Partnering</span> With Us?</h2>
+      <p class="section-p" style="margin:1rem auto 2rem;text-align:center">We're actively seeking Shariah boards, Islamic banks, fintech companies, and academic institutions to join our ecosystem.</p>
+      <a href="/contact" class="btn-primary">Get in Touch →</a>
+    </div>
   </div>
 </section>
 {% endblock %}

@@ -1,55 +1,88 @@
 {% extends "base.html" %}
 {% block title %}Contact — Shariah.AI{% endblock %}
 {% block content %}
+
 <div class="page-header">
-  <p class="section-label">Get in Touch</p>
-  <h1>Let's Build the<br/><em>Future</em> Together</h1>
-  <p>Whether you're an Islamic bank, fintech startup, Shariah board, or investor — we'd love to hear from you.</p>
-</div>
-<section class="section-pad">
-  <div class="contact-grid">
-    <div class="contact-info reveal">
-      <h3>Ready to Transform<br/>Islamic Finance?</h3>
-      <p>Request a full platform demo, discuss partnership opportunities, or simply ask a question. Our team responds within 24 hours.</p>
-      <div class="contact-detail"><span>✉</span><span>hello@shariah.ai</span></div>
-      <div class="contact-detail"><span>🌐</span><span>www.shariah.ai</span></div>
-      <div class="contact-detail"><span>📍</span><span>Global — Dubai · Kuala Lumpur · London</span></div>
-      <div style="margin-top: 2.5rem;">
-        <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 1rem;">Or try the live demo first</p>
-        <a href="/chat" class="btn-outline">Launch AI Advisor →</a>
+  <div class="page-header-text">
+    <p class="section-label">Get in Touch</p>
+    <h1>Let's Build the<br/><span>Future</span> Together</h1>
+    <p>Whether you're an Islamic bank, fintech startup, Shariah board, or investor — we'd love to hear from you.</p>
+  </div>
+  <!-- WORLD MAP PINGS ANIMATION -->
+  <div class="page-header-visual">
+    <div class="anim-contact">
+      <div class="world-grid"></div>
+      <!-- Location pins -->
+      <div class="location-pin lp1">
+        <div class="pin-ring"></div>
+        <div class="pin-ring pin-ring-2"></div>
+        <div class="pin-dot"></div>
+        <div class="pin-label">Dubai</div>
       </div>
+      <div class="location-pin lp2">
+        <div class="pin-ring"></div>
+        <div class="pin-ring pin-ring-2"></div>
+        <div class="pin-dot" style="background:#6366f1;box-shadow:0 0 12px rgba(99,102,241,0.6)"></div>
+        <div class="pin-label" style="background:#6366f1">London</div>
+      </div>
+      <div class="location-pin lp3">
+        <div class="pin-ring"></div>
+        <div class="pin-ring pin-ring-2"></div>
+        <div class="pin-dot" style="background:#10b981;box-shadow:0 0 12px rgba(16,185,129,0.6)"></div>
+        <div class="pin-label" style="background:#10b981">New York</div>
+      </div>
+      <div class="location-pin lp4">
+        <div class="pin-ring"></div>
+        <div class="pin-ring pin-ring-2"></div>
+        <div class="pin-dot" style="background:#f59e0b;box-shadow:0 0 12px rgba(245,158,11,0.6)"></div>
+        <div class="pin-label" style="background:#f59e0b;color:var(--ink)">KL</div>
+      </div>
+      <div class="location-pin lp5">
+        <div class="pin-ring"></div>
+        <div class="pin-ring pin-ring-2"></div>
+        <div class="pin-dot"></div>
+        <div class="pin-label">Karachi</div>
+      </div>
+      <!-- Connection beams -->
+      <div class="connection-beam cb1"></div>
+      <div class="connection-beam cb2"></div>
+      <div class="connection-beam cb3"></div>
     </div>
-    <div class="contact-form reveal">
-      <div class="form-group">
-        <label>Full Name</label>
-        <input type="text" placeholder="Your name" id="cName"/>
+  </div>
+</div>
+
+<section class="section-white">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Ready to Transform<br/>Islamic Finance?</h3>
+        <p>Request a platform demo, discuss partnership opportunities, or ask a question. Our team responds within 24 hours.</p>
+        <div class="contact-detail"><span>✉</span><span>hello@shariah.ai</span></div>
+        <div class="contact-detail"><span>🌐</span><span>www.shariah.ai</span></div>
+        <div class="contact-detail"><span>📍</span><span>Dubai · Kuala Lumpur · London</span></div>
+        <div style="margin-top:2rem">
+          <a href="/chat" class="btn-outline" style="border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.7)">Launch AI Advisor →</a>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" placeholder="your@email.com" id="cEmail"/>
+      <div class="contact-form">
+        <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name" id="cName"/></div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com" id="cEmail"/></div>
+        <div class="form-group"><label>Organization</label><input type="text" placeholder="Bank, Fintech, Fund..." id="cOrg"/></div>
+        <div class="form-group"><label>I'm interested in</label>
+          <select id="cType">
+            <option value="">Select...</option>
+            <option>Platform Demo</option>
+            <option>Strategic Partnership</option>
+            <option>API Integration</option>
+            <option>Investment Opportunity</option>
+            <option>Academic Collaboration</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea rows="4" placeholder="Tell us about your needs..." id="cMsg"></textarea></div>
+        <button class="btn-primary" onclick="submitForm()" style="justify-content:center">Send Message →</button>
+        <p id="formMsg" style="display:none;font-size:0.85rem;color:#10b981;font-weight:600">✓ Message received! We'll be in touch within 24 hours.</p>
       </div>
-      <div class="form-group">
-        <label>Organization</label>
-        <input type="text" placeholder="Bank, Fintech, Fund, etc." id="cOrg"/>
-      </div>
-      <div class="form-group">
-        <label>I'm interested in</label>
-        <select id="cType">
-          <option value="">Select...</option>
-          <option>Platform Demo</option>
-          <option>Strategic Partnership</option>
-          <option>API Integration</option>
-          <option>Investment Opportunity</option>
-          <option>Academic Collaboration</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea rows="4" placeholder="Tell us about your needs..." id="cMsg"></textarea>
-      </div>
-      <button class="btn-primary" onclick="submitForm()" style="width: 100%; justify-content: center;">Send Message →</button>
-      <p id="formMsg" style="display: none; font-size: 0.85rem; color: var(--gold); margin-top: 1rem;">✓ Message received! We'll be in touch within 24 hours.</p>
     </div>
   </div>
 </section>
@@ -61,8 +94,6 @@ function submitForm() {
   const email = document.getElementById('cEmail').value.trim();
   if (!name || !email) { alert('Please fill in your name and email.'); return; }
   document.getElementById('formMsg').style.display = 'block';
-  // In production: POST this data to your backend
-  console.log('Contact form submitted');
 }
 </script>
 {% endblock %}
