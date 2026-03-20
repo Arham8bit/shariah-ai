@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>{% block title %}Shariah.AI — Intelligent Islamic Finance{% endblock %}</title>
-  <meta name="description" content="AI-powered Shariah compliance tools for modern Islamic finance. Built on deep Islamic jurisprudence and cutting-edge AI."/>
+  <meta name="description" content="AI-powered Shariah compliance tools for modern Islamic finance."/>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 </head>
 <body>
 
-<!-- ─── NAVIGATION ─── -->
-<nav>
+<nav id="mainNav">
   <a href="/" class="logo">Shariah<span>.AI</span></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="/solutions">Solutions</a></li>
@@ -25,10 +24,8 @@
   </button>
 </nav>
 
-<!-- ─── PAGE CONTENT ─── -->
 {% block content %}{% endblock %}
 
-<!-- ─── FOOTER ─── -->
 <footer>
   <a href="/" class="footer-logo">Shariah<span>.AI</span></a>
   <ul class="footer-links">
@@ -41,16 +38,16 @@
 </footer>
 
 <script>
-  function toggleNav() {
-    document.getElementById('navLinks').classList.toggle('open');
-  }
-
-  // Scroll reveal animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 40);
+});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
 {% block scripts %}{% endblock %}

@@ -6,7 +6,7 @@ import os
 load_dotenv()   
 
 app = Flask(__name__)
-client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+client = Groq(api_key="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")
 SYSTEM_PROMPT = """You are an expert Islamic Finance advisor with deep knowledge of Shariah law as it applies to financial matters.
 
 You help users understand:

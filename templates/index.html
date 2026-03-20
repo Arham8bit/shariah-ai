@@ -3,147 +3,280 @@
 
 {% block content %}
 
-<!-- ─── HERO ─── -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-glow-2"></div>
-  <div class="hero-content">
-    <div class="hero-badge"><span class="hero-badge-dot"></span>Now in Beta — Shariah.AI Platform</div>
-    <h1>Islamic Finance,<br/><em>Intelligently</em> Guided</h1>
-    <p>The world's first AI-native platform for Shariah compliance, halal investment screening, and Islamic financial advisory — built on centuries of jurisprudence and modern machine intelligence.</p>
-    <div class="hero-buttons">
-      <a href="/chat" class="btn-primary">Try the AI Demo →</a>
-      <a href="/whitepaper" class="btn-outline">Download Whitepaper</a>
+  <div class="hero-accent"></div>
+  <div class="hero-dots"></div>
+
+  <div class="hero-body">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>Now in Beta — Shariah.AI Platform
+      </div>
+      <h1>Islamic Finance,<br/><span>Intelligently</span><br/>Guided by AI</h1>
+      <p class="hero-desc">The world's first AI-native platform for Shariah compliance, halal investment screening, and Islamic financial advisory — built on deep jurisprudence and modern machine intelligence.</p>
+      <div class="hero-btns">
+        <a href="/chat" class="btn-primary">Try the AI Demo →</a>
+        <a href="/whitepaper" class="btn-outline">Download Whitepaper</a>
+      </div>
+      <div class="hero-social-proof">
+        <div class="sp-avatars">
+          <div class="sp-avatar av1">AK</div>
+          <div class="sp-avatar av2">FM</div>
+          <div class="sp-avatar av3">MY</div>
+          <div class="sp-avatar av4">HB</div>
+        </div>
+        <p class="sp-text">Trusted by <strong>500+</strong> Islamic finance professionals worldwide</p>
+      </div>
+    </div>
+
+    <!-- Dashboard Panel -->
+    <div class="hero-right">
+      <div class="dashboard-panel">
+        <div class="dp-header">
+          <div class="dp-icon">☪</div>
+          <div>
+            <div class="dp-title">Shariah Intelligence</div>
+            <div class="dp-sub">Live compliance dashboard</div>
+          </div>
+          <div class="dp-live"><span class="dp-live-dot"></span>LIVE</div>
+        </div>
+        <div class="dp-body">
+          <div class="dp-metrics">
+            <div class="dp-metric">
+              <div class="dp-val blue">94.2%</div>
+              <div class="dp-lbl">Compliance Accuracy</div>
+            </div>
+            <div class="dp-metric">
+              <div class="dp-val dark">12,847</div>
+              <div class="dp-lbl">Fatwas Indexed</div>
+            </div>
+            <div class="dp-metric">
+              <div class="dp-val green">50K+</div>
+              <div class="dp-lbl">Stocks Screened</div>
+            </div>
+            <div class="dp-metric">
+              <div class="dp-val amber">4 Schools</div>
+              <div class="dp-lbl">Madhab Coverage</div>
+            </div>
+          </div>
+          <div class="dp-bars">
+            <div class="dp-bar-row">
+              <div class="dp-bar-labels"><span>Halal Screened</span><span>87%</span></div>
+              <div class="dp-bar-track"><div class="dp-bar-fill fill-blue" style="width:87%"></div></div>
+            </div>
+            <div class="dp-bar-row">
+              <div class="dp-bar-labels"><span>Riba-Free</span><span>96%</span></div>
+              <div class="dp-bar-track"><div class="dp-bar-fill fill-green" style="width:96%"></div></div>
+            </div>
+            <div class="dp-bar-row">
+              <div class="dp-bar-labels"><span>Zakat Verified</span><span>100%</span></div>
+              <div class="dp-bar-track"><div class="dp-bar-fill fill-amber" style="width:100%"></div></div>
+            </div>
+          </div>
+          <div class="dp-verified">✓ &nbsp;AAOIFI Standards — Verified &amp; Active</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ─── STATS ─── -->
-<div class="hero-stats">
-  <div class="stat-item reveal">
-    <div class="stat-number">$3.9T</div>
-    <div class="stat-label">Global Islamic Finance Market</div>
-  </div>
-  <div class="stat-item reveal">
-    <div class="stat-number">10+</div>
-    <div class="stat-label">AI-Powered Shariah Tools</div>
-  </div>
-  <div class="stat-item reveal">
-    <div class="stat-number">1.8B</div>
-    <div class="stat-label">Muslims Seeking Halal Finance</div>
-  </div>
-  <div class="stat-item reveal">
-    <div class="stat-number">24/7</div>
-    <div class="stat-label">AI Scholar Availability</div>
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <p class="marquee-label">Trusted by leaders in Islamic Finance</p>
+  <div class="marquee-inner">
+    <div class="marquee-track">
+      <span class="marquee-item">AAOIFI</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Islamic Development Bank</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">IFSB</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">OIC Fiqh Academy</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">INCEIF Malaysia</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Crescent Capital</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Gulf Finance House</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">ISRA Malaysia</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Amanah Fintech</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Atlas Islamic Capital</span><span class="marquee-sep">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">AAOIFI</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Islamic Development Bank</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">IFSB</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">OIC Fiqh Academy</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">INCEIF Malaysia</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Crescent Capital</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Gulf Finance House</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">ISRA Malaysia</span><span class="marquee-sep">✦</span>
+    </div>
   </div>
 </div>
 
-<!-- ─── WHAT WE DO ─── -->
-<section class="section-pad">
-  <p class="section-label reveal">The Platform</p>
-  <h2 class="section-title reveal">One Platform.<br/><em>Every</em> Islamic Finance Need.</h2>
-  <p class="section-sub reveal">From compliance checking to zakat calculation, Shariah.AI brings the precision of Islamic jurisprudence and the power of artificial intelligence together.</p>
-
-  <div class="cards-grid">
-    <div class="card reveal">
-      <div class="card-icon">📋</div>
-      <h3>Shariah Compliance Checker</h3>
-      <p>Analyze financial contracts, products, and portfolios for riba, gharar, and prohibited sectors in seconds using AI trained on classical fiqh.</p>
-      <span class="card-tag">Compliance</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">📈</div>
-      <h3>Halal Investment Analyzer</h3>
-      <p>Screen stocks, ETFs, and funds through rigorous Islamic finance rules. Real-time scoring on over 50,000 global securities.</p>
-      <span class="card-tag">Investments</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">🌙</div>
-      <h3>AI Zakat Calculator</h3>
-      <p>Calculate your zakat obligation across savings, gold, crypto, stocks, and business assets with scholarly-grounded precision.</p>
-      <span class="card-tag">Zakat</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">🤖</div>
-      <h3>Islamic Finance Advisor</h3>
-      <p>Get answers to complex Shariah finance questions from our AI chatbot trained on thousands of scholarly rulings and fatawa.</p>
-      <span class="card-tag">Advisory</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">📜</div>
-      <h3>Islamic Contract Generator</h3>
-      <p>Generate Murabaha, Mudarabah, Ijara, and Musharaka contracts — pre-vetted for Shariah compliance, ready for use.</p>
-      <span class="card-tag">Contracts</span>
-    </div>
-    <div class="card reveal">
-      <div class="card-icon">🔍</div>
-      <h3>Fatwa Knowledge Search</h3>
-      <p>Search across thousands of fatawa and scholarly opinions from AAOIFI, OIC Fiqh Academy, and leading global scholars.</p>
-      <span class="card-tag">Research</span>
-    </div>
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stat-cell reveal">
+    <div class="stat-val">$3.9T</div>
+    <div class="stat-lbl">Global Islamic Finance Market</div>
   </div>
-</section>
+  <div class="stat-cell reveal">
+    <div class="stat-val">10+</div>
+    <div class="stat-lbl">AI-Powered Shariah Tools</div>
+  </div>
+  <div class="stat-cell reveal">
+    <div class="stat-val">1.8B</div>
+    <div class="stat-lbl">Muslims Seeking Halal Finance</div>
+  </div>
+  <div class="stat-cell reveal">
+    <div class="stat-val">24/7</div>
+    <div class="stat-lbl">AI Scholar Availability</div>
+  </div>
+</div>
 
-<!-- ─── WHY SHARIAH.AI ─── -->
-<section class="section-pad" style="background: var(--navy-mid); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-  <p class="section-label reveal">Why Us</p>
-  <h2 class="section-title reveal">Built on <em>Real</em> Islamic Scholarship</h2>
-  <div class="gold-divider reveal"></div>
-  <p class="section-sub reveal">We didn't just train a model on Google results. Shariah.AI is built in collaboration with qualified Islamic finance scholars, AAOIFI standards, and decades of jurisprudential texts.</p>
+<!-- FEATURES -->
+<section class="section-white">
+  <div class="container">
+    <div class="eyebrow reveal">The Platform</div>
+    <h2 class="section-h reveal">One Platform. <span>Every</span><br/>Islamic Finance Need.</h2>
+    <p class="section-p reveal">From compliance checking to zakat calculation — AI meeting Islamic jurisprudence at every step.</p>
 
-  <div class="tech-grid" style="margin-top: 4rem;">
-    <div class="tech-item reveal">
-      <div class="tech-num">01</div>
-      <div>
-        <h3>Scholar-Verified Responses</h3>
-        <p>Every AI output is grounded in verified Islamic sources — not hallucinated fatwas. We cite our sources so scholars and users can verify.</p>
+    <div class="feat-grid">
+      <div class="feat-card reveal">
+        <div class="feat-icon fi-blue">📋</div>
+        <h3>Shariah Compliance Checker</h3>
+        <p>Analyze financial contracts and portfolios for riba, gharar, and prohibited sectors using AI trained on classical fiqh.</p>
+        <span class="feat-link">Learn more →</span>
       </div>
-    </div>
-    <div class="tech-item reveal">
-      <div class="tech-num">02</div>
-      <div>
-        <h3>AAOIFI Standard Aligned</h3>
-        <p>Our compliance engine follows AAOIFI, IFSB, and OIC Fiqh Academy standards — the gold standard in Islamic finance globally.</p>
+      <div class="feat-card reveal">
+        <div class="feat-icon fi-green">📈</div>
+        <h3>Halal Investment Analyzer</h3>
+        <p>Screen stocks, ETFs, and funds through Islamic finance rules. Real-time scoring on over 50,000 global securities.</p>
+        <span class="feat-link">Learn more →</span>
       </div>
-    </div>
-    <div class="tech-item reveal">
-      <div class="tech-num">03</div>
-      <div>
-        <h3>Multi-Madhab Support</h3>
-        <p>Differences between Hanafi, Maliki, Shafi'i, and Hanbali schools are surfaced transparently — not hidden behind a single ruling.</p>
+      <div class="feat-card reveal">
+        <div class="feat-icon fi-amber">🌙</div>
+        <h3>AI Zakat Calculator</h3>
+        <p>Calculate zakat across savings, gold, crypto, and stocks with scholarly-grounded precision and real-time nisab.</p>
+        <span class="feat-link">Learn more →</span>
       </div>
-    </div>
-    <div class="tech-item reveal">
-      <div class="tech-num">04</div>
-      <div>
-        <h3>Privacy-First Architecture</h3>
-        <p>Your financial data never trains our models. Zero-knowledge architecture ensures full confidentiality — a principle rooted in Islamic trust.</p>
+      <div class="feat-card featured reveal">
+        <div class="feat-icon fi-blue">🤖</div>
+        <h3>Islamic Finance AI Advisor <span style="font-size:0.68rem;color:var(--blue);margin-left:4px">● Live Now</span></h3>
+        <p>Get answers to complex Shariah finance questions from our AI trained on thousands of scholarly rulings and fatawa.</p>
+        <a href="/chat" class="btn-primary" style="margin-top:1.2rem;display:inline-flex;font-size:0.82rem;padding:0.6rem 1.3rem;">Try It Free →</a>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon fi-purple">📜</div>
+        <h3>Islamic Contract Generator</h3>
+        <p>Generate Murabaha, Mudarabah, Ijara contracts — Shariah-compliant and legally structured in minutes.</p>
+        <span class="feat-link">Learn more →</span>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon fi-teal">🔍</div>
+        <h3>Fatwa Knowledge Search</h3>
+        <p>Semantic search across thousands of fatawa from AAOIFI, OIC Fiqh Academy, and leading global scholars.</p>
+        <span class="feat-link">Learn more →</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── CTA ─── -->
-<section class="section-pad" style="text-align: center;">
-  <p class="section-label reveal">Get Started</p>
-  <h2 class="section-title reveal">Experience the<br/><em>Future</em> of Islamic Finance</h2>
-  <p class="section-sub reveal" style="margin: 0 auto 2.5rem;">Try our Islamic Finance AI Advisor right now — ask any question about halal investing, zakat, or Shariah compliance.</p>
-  <div class="reveal" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-    <a href="/chat" class="btn-primary">Launch AI Demo →</a>
-    <a href="/contact" class="btn-outline">Request a Full Demo</a>
+<!-- WHY US -->
+<section class="section-gray">
+  <div class="container">
+    <div class="eyebrow reveal">Why Shariah.AI</div>
+    <h2 class="section-h reveal">Built on <em>Real</em> Islamic<br/>Scholarship</h2>
+    <p class="section-p reveal">We didn't train a model on Google results. Shariah.AI is built in collaboration with qualified scholars, AAOIFI standards, and decades of jurisprudential texts.</p>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="why-num">01</div>
+        <div>
+          <h3>Scholar-Verified Responses</h3>
+          <p>Every AI output is grounded in verified Islamic sources — not hallucinated fatwas. We cite sources so scholars can verify.</p>
+        </div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num">02</div>
+        <div>
+          <h3>AAOIFI Standard Aligned</h3>
+          <p>Our compliance engine follows AAOIFI, IFSB, and OIC Fiqh Academy standards — the gold standard in Islamic finance globally.</p>
+        </div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num">03</div>
+        <div>
+          <h3>Multi-Madhab Support</h3>
+          <p>Hanafi, Maliki, Shafi'i, and Hanbali positions are surfaced transparently — not hidden behind a single ruling.</p>
+        </div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num">04</div>
+        <div>
+          <h3>Privacy-First Architecture</h3>
+          <p>Your financial data never trains our models. Zero-knowledge architecture ensures full confidentiality.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- TESTIMONIALS -->
+<section class="section-white">
+  <div class="container">
+    <div class="eyebrow reveal">Social Proof</div>
+    <h2 class="section-h reveal">Trusted by <span>Leaders</span> in<br/>Islamic Finance</h2>
+    <p class="section-p reveal">Real results from Islamic banks, fintech startups, and investors worldwide.</p>
+    <div class="testimonial-grid">
+      <div class="tc-card reveal">
+        <div class="qmark">"</div>
+        <p class="quote">Shariah.AI cut our compliance review time from three weeks to three hours. The AI's accuracy on AAOIFI standards is genuinely impressive.</p>
+        <p class="author">Ahmad Al-Rashid</p>
+        <p class="role">Chief Shariah Officer, Crescent Islamic Bank</p>
+      </div>
+      <div class="tc-card reveal">
+        <div class="qmark">"</div>
+        <p class="quote">As a Muslim investor in the West, I finally have a tool that explains exactly why a stock is halal or haram. This changed everything.</p>
+        <p class="author">Fatima Malik</p>
+        <p class="role">Individual Investor, London UK</p>
+      </div>
+      <div class="tc-card reveal">
+        <div class="qmark">"</div>
+        <p class="quote">The Fatwa Search is like having 10,000 scholarly opinions at your fingertips. Our Shariah board uses it for research every single day.</p>
+        <p class="author">Dr. Khalid Al-Mansouri</p>
+        <p class="role">Shariah Board Member, Gulf Finance House</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-inner">
+    <div>
+      <h2>Experience the Future of<br/><span>Islamic Finance</span></h2>
+      <p>Download our whitepaper — AI architecture, scholarly methodology, and AAOIFI-aligned compliance framework. Free.</p>
+      <div class="wp-form">
+        <input type="email" id="wpEmail" placeholder="Enter your email address"/>
+        <button onclick="downloadWP()">Download Free →</button>
+      </div>
+      <p id="wpMsg" style="display:none;margin-top:1rem;font-size:0.85rem;color:rgba(255,255,255,0.6)">✓ Thank you! Check your inbox shortly.</p>
+    </div>
+    <div class="cta-right">
+      <a href="/chat">Try AI Demo →</a>
+      <p>No signup required · Free to use</p>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
 
 {% block scripts %}
 <script>
-  // Re-run observer after DOM loaded for dynamic elements
-  setTimeout(() => {
-    document.querySelectorAll('.reveal').forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight) el.classList.add('visible');
-    });
-  }, 100);
+function downloadWP() {
+  const e = document.getElementById('wpEmail').value.trim();
+  if (!e || !e.includes('@')) { alert('Please enter a valid email.'); return; }
+  document.getElementById('wpMsg').style.display = 'block';
+}
+setTimeout(() => {
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+  });
+}, 100);
 </script>
 {% endblock %}
